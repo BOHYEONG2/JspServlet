@@ -24,7 +24,7 @@ public class InsertBoardController implements Controller {
 		dao.insertBoard(vo);
 		
 		
-		return "board.jsp";	
+		return "getBoardList.do";	
 	}
 
 }
