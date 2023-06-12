@@ -1,0 +1,27 @@
+.table {
+  width: 100%;
+}
+
+.logo {
+    background-color: blue;
+}
+
+.topmenu {
+    text-align: right;
+    background-color: skyblue; /*배경 색깔*/
+    color: black; /*텍스트 색깔*/
+    font-size: 25px; /*텍스트 사이즈*/
+}
+
+.bottommenu {
+    background-color: yellow;
+    font-size: 20px;
+}
+
+.logoimg {
+    width: 300px;
+}
+
+.background {
+    width: 100%;
+}
