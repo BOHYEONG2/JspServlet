@@ -30,11 +30,15 @@ public class DispatcherServlet extends HttpServlet {
 			String callPage = ctrl.handleRequest(request, response);  // 요건 컨트롤러부분 호출하는거
 			//System.out.println("jsp : " + callPage);
 			
-			RequestDispatcher dispatcher = request.getRequestDispatcher(callPage);
-			dispatcher.forward(request, response);
-	
-			
+			if(callPage.startsWith("redirect:")) {
+				
+				response.sendRedirect(callPage.substring("redirect:".length()));
+			}else {
+				RequestDispatcher dispatcher = request.getRequestDispatcher(callPage);
+				dispatcher.forward(request, response); 
+		
 	}
 
 	
+	}
 }
